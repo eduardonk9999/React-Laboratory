@@ -1,23 +1,29 @@
 import React from  'react';
+import Header from './Header';
+import Home from './Home';
+import Produtos from './Produtos';
 
-import Header from './Header/Header';
+/*
 
-
-const produtos = [
-  { nome: 'Notebook', propriedades: ['16gb ram', '512gb'] },
-  { nome: 'Smartphone', propriedades: ['2gb ram', '128gb'] },
-];
-  
+ */ 
 
 
-console.log(produtos)
+const App = () => {
+  const { pathname } = window.location;
+  let Pagina;
 
-function App() {
+  if(pathname === '/produtos'){
+    Pagina = Produtos
+  } else {
+    Pagina = Home
+  }
+
   return (
-    <>
+   <section>
       <Header />
-      <h1> Teste </h1>
-    </>
+      <Pagina />
+   </section>  
+
   );
 }
 

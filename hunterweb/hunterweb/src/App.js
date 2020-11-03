@@ -1,9 +1,15 @@
+import React, { Component } from 'react';
 
+import './styles.css';
 
-function App() {
+import Header from './components/Header/';
+import Main from './pages/main'
+
+const App = () => {
   return (
-    <div>
-      <h1>Olá</h1>
+    <div className="App">
+      <Header />  
+      <Main />
     </div>
   );
 }
